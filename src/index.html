@@ -2,13 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Cifra de César</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
+    <header>
+      <h1> <span style="color:#c20067">.</span>STORE PASSWORDS SECURELY<span style="color:#c20067">.</span></h1>
+  </header>
+  <div id="ins">
+    <p>Para armazenar sua senha com segurança, o melhor à fazer é criptografá-la.</p>
+    <p>Para criptografar sua senha, primeiro escolha um número de deslocamento, e em seguida coloque o texto:</p>
+  </div>
+    <div class="des-offset">
+      <label for="offset">Insira o nº de deslocamento:</label>
+      <input type="number" class="des" id="offset" placeholder="Ex: 10"/>
     </div>
+  
+
+  <section>
+    <div id="dados">
+      <textarea id="original" name="original" rows="10" cols="90" placeholder="Escreva aqui a senha que deseja criptografar 🔒...."></textarea>
+  
+    </div>
+    <div>
+    <input type="button" class="botao" value="Criptografar"  onclick="Criptografar()">
+    <input type="button" class="botao" value="Descriptografar" onclick="Descriptografar()">
+    </div>
+    <div class="res">
+    <textarea id="cifrada" name="cifrada" rows="10" cols="90" placeholder="Sua senha criptografada 🔒...."></textarea>
+    </div>
+    </section>
+    <footer>
+      <p>&copy; PaolaOliveira</p>
+  </footer>
+
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
