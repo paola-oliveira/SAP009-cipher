@@ -12,6 +12,14 @@ body {
     font-weight: 300;  
    text-align: center;
    color: white; 
+   margin-top: 2px;
+  }
+
+  img {
+    width: 15%;
+    margin: auto;
+    display: block;
+    align: center;
   }
 
 section {
@@ -61,6 +69,7 @@ textarea {
   background-color: #c20067;
   border: 5px solid #c20067;
   margin-top: 20px;
+  cursor:pointer;
 }
 
 .res {
@@ -71,6 +80,7 @@ footer {
     color: white; 
     text-align: center;
     font-style: italic;
+    font-size: 20px;
 }
 
 .icons ion-icon {
