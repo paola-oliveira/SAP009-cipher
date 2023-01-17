@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Cifra de César</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1> <span style="color:#c20067">.</span>STORE PASSWORDS SECURELY<span style="color:#c20067">.</span></h1>
+
+<head>
+  <meta charset="utf-8">
+  <title>Cifra de César</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script src="index.js" type="module"></script>
+<body>
+
+  <header>
+    <h1> <span style="color:#c20067">.</span>STORE PASSWORDS SECURELY<span style="color:#c20067">.</span></h1>
   </header>
   <div id="ins">
     <p>Para armazenar sua senha com segurança, o melhor à fazer é criptografá-la.</p>
     <p>Para criptografar sua senha, primeiro escolha um número de deslocamento, e em seguida coloque o texto:</p>
   </div>
-    <div class="des-offset">
-      <label for="offset">Insira o nº de deslocamento:</label>
-      <input type="number" class="des" id="offset" placeholder="Ex: 10"/>
-    </div>
-  
+  <div class="des-offset">
+    <label for="offset">Insira o nº de deslocamento:</label>
+    <input type="number" class="des" id="offset" placeholder="Ex: 10" />
+  </div>
+
 
   <section>
     <div id="dados">
-      <textarea id="original" name="original" rows="10" cols="90" placeholder="Escreva aqui a senha que deseja criptografar 🔒...."></textarea>
-  
+      <textarea id="original" name="original" rows="10" cols="90"
+        placeholder="Escreva aqui a senha que deseja criptografar 🔒...."></textarea>
+
     </div>
     <div>
-    <input type="button" class="botao" value="Criptografar"  onclick="Criptografar()">
-    <input type="button" class="botao" value="Descriptografar" onclick="Descriptografar()">
+      <input type="button" class="botao" value="Criptografar" id="criptografar" >
+      <input type="button" class="botao" value="Descriptografar" id="descriptografar">
     </div>
     <div class="res">
-    <textarea id="cifrada" name="cifrada" rows="10" cols="90" placeholder="Sua senha criptografada 🔒...."></textarea>
+      <textarea id="cifrada" name="cifrada" rows="10" cols="90" placeholder="Sua senha criptografada 🔒...."></textarea>
     </div>
-    </section>
-    <footer>
-      <p>&copy; PaolaOliveira</p>
+  </section>
+  <footer>
+    <p>&copy; Desenvolvido por Paola Oliveira</p>
+    <div class="icons">
+      <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href=""><ion-icon name="logo-github"></ion-icon></a>
+    </div>
   </footer>
 
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="index.js" type="module"></script>
+</body>
 
-    <script src="index.js" type="module"></script>
-  </body>
 </html>

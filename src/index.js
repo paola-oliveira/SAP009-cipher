@@ -1,8 +1,9 @@
 import cipher from './cipher.js';
 
-const offset = document.getElementById("offset");
-const mensagemOriginal = document.getElementById("original");
-const mensagemCifrada = document.getElementById("cifrada");
-
-const botãocodificar = document.getElementById("criptografar");
-const botãodescodificar = document.getElementById("descriptografar");
+const btCriptografar = document.getElementById('criptografar');
+btCriptografar.addEventListener('click', function(){
+    const mensagemOriginal = document.getElementById('original');
+    const offSet = document.getElementById('offset');
+    const mensagemCriptografada = cipher.encode(offSet.value,mensagemOriginal.value);
+    document.getElementById('cifrada').innerHTML = mensagemCriptografada; 
+})
