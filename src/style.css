@@ -19,7 +19,6 @@ body {
     width: 15%;
     margin: auto;
     display: block;
-    align: center;
   }
 
 section {
@@ -30,7 +29,6 @@ section {
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.466);
     margin-top: 30px;
-    
 }
 
 .desl {
