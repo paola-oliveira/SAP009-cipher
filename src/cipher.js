@@ -6,15 +6,17 @@ function encode(offset, mensagem) {
   let mensagemCriptografada = '';
   const offsetNumber = parseInt(offset);
   const alfabetoMaiusculo = alfabeto.toUpperCase();
-
+  if (typeof offset !== 'number' || typeof mensagem !== 'string') {
+    throw new TypeError();
+  }
   for (let i = 0; i < mensagem.length; i++) {
     const msg = mensagem[i];
     if(/[a-zA-Z]/.test(msg)){
-        const numeroPosicaoOriginal = msg === msg.toUpperCase() ? alfabetoMaiusculo.indexOf(msg) : alfabeto.indexOf(msg);
-        const novaPosicaoLetra = (numeroPosicaoOriginal + offsetNumber + alfabeto.length) % alfabeto.length;
-        mensagemCriptografada += msg === msg.toUpperCase() ? alfabetoMaiusculo[novaPosicaoLetra] : alfabeto[novaPosicaoLetra];
+      const numeroPosicaoOriginal = msg === msg.toUpperCase() ? alfabetoMaiusculo.indexOf(msg) : alfabeto.indexOf(msg);
+      const novaPosicaoLetra = (numeroPosicaoOriginal + offsetNumber + alfabeto.length) % alfabeto.length;
+      mensagemCriptografada += msg === msg.toUpperCase() ? alfabetoMaiusculo[novaPosicaoLetra] : alfabeto[novaPosicaoLetra];
     }else{
-        mensagemCriptografada += msg;
+      mensagemCriptografada += msg;
     }
   }
   return mensagemCriptografada;
@@ -24,7 +26,9 @@ function decode (offset,mensagem) {
   let mensagemDescriptografada = '';
   const offsetNumber = parseInt(offset);
   const alfabetoMaiusculo = alfabeto.toUpperCase();
-
+  if (typeof offset !== 'number' || typeof mensagem !== 'string') {
+    throw new TypeError();
+  }
   for (let i = 0; i < mensagem.length; i++) {
     const msg = mensagem[i];
     if (/[a-zA-Z]/.test(msg)){
@@ -32,7 +36,7 @@ function decode (offset,mensagem) {
       const posiçãoOriginalLetra = (decodificação - (offsetNumber % alfabeto.length) + alfabeto.length) % alfabeto.length;
       mensagemDescriptografada += msg === msg.toUpperCase() ? alfabetoMaiusculo[posiçãoOriginalLetra] : alfabeto[posiçãoOriginalLetra];
     }else{
-        mensagemDescriptografada += msg;
+      mensagemDescriptografada += msg;
     }
   }
   return mensagemDescriptografada;

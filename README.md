@@ -2,17 +2,32 @@
 
 ## Índice
 
-* [1. Prefácio](#1-prefácio)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Considerações gerais](#3-considerações-gerais)
-* [4. Marco: Critérios de Aceitação Mínimos do Projeto](#5-marco-critérios-de-aceitação-mínimos-do-projeto)
-* [5. Marco Opcional: Adicione suporte para letras minúsculas e outros caracteres](#5-marco-opcional-adicione-suporte-para-letras-minúsculas-e-outros-caracteres)
-* [6. Considerações técnicas](#6-considerações-técnicas)
-* [7. Objetivos de aprendizagem](#7-objetivos-de-aprendizagem)
-* [8. Guias, dicas e leituras complementares](#8-guias-dicas-e-leituras-complementares)
-* [9. Para considerar o feedback do projeto](#9-para-considerar-o-feedback-do-projeto)
+- [Cifra de César](#cifra-de-césar)
+  - [Índice](#índice)
+  - [1. Prefácio](#1-prefácio)
+  - [2. Resumo do projeto](#2-resumo-do-projeto)
+    - [Os objetivos gerais deste projeto são os seguintes](#os-objetivos-gerais-deste-projeto-são-os-seguintes)
+  - [3. Como usar](#3-como-usar)
+  - [4. Protótipo do Projeto](#4-protótipo-do-projeto)
+  - [5. Marco Opcional: Adicione suporte para letras minúsculas e outros caracteres](#5-marco-opcional-adicione-suporte-para-letras-minúsculas-e-outros-caracteres)
+  - [6. Considerações técnicas](#6-considerações-técnicas)
+    - [Descrição de scripts/arquivos](#descrição-de-scriptsarquivos)
+    - [Deploy](#deploy)
+  - [7. Objetivos de aprendizagem](#7-objetivos-de-aprendizagem)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [Web APIs](#web-apis)
+    - [JavaScript](#javascript)
+    - [Controle de Versões (Git e GitHub)](#controle-de-versões-git-e-github)
+    - [Centrado no usuário](#centrado-no-usuário)
+    - [Design de produto](#design-de-produto)
+  - [8. Guias, dicas e leituras complementares](#8-guias-dicas-e-leituras-complementares)
+    - [Primeiros passos](#primeiros-passos)
+    - [Recursos extras](#recursos-extras)
+  - [9. Para considerar o feedback do projeto](#9-para-considerar-o-feedback-do-projeto)
 
 ***
+
 
 ## 1. Prefácio
 
@@ -41,26 +56,11 @@ a cifra de Vigenère, e tem aplicação no sistema ROT13.
 
 ## 2. Resumo do projeto
 
-Neste projeto você criará a primeira aplicação web do _bootcamp_. Nela o usuário
+Neste projeto foi criado a primeira aplicação web do _bootcamp_. Nela o usuário
 poderá cifrar e decifrar um texto no navegador indicando um deslocamento
-específico de caracteres (_offset_). Você fará isso usando HTML, CSS e
-JavaScript.
+específico de caracteres (_offset_). 
 
-O tema é livre. Você deve pensar em alguma situação de vida real em que seja
-necessário cifrar uma mensagem e pensar em como deve ser a experiência do
-usuário (tela, explicações, mensagens, cores, marca?, etc.). Algumas ideias de
-exemplo:
-
-* Criar senhas seguras para email.
-* Cifrar cartões de crédito.
-* Ferramenta de mensagens internas de uma organização
-  em uma zona de conflito.
-* Mensagens secretas para alguma pessoa.
-
-Como continuação do projeto de pré-admissão, você retrabalhará os fundamentos
-do JavaScript, incluindo conceitos como variáveis, condicionais e funções,
-bem como eventos e manipulação básica de DOM, fundamentos HTML e CSS.
- desenvolver este projeto, você também se familiarizará com novos conceitos.
+O projeto, tem como objetivo, permitir que os usuários salvem suas senhas de forma segura. 
 
 ### Os objetivos gerais deste projeto são os seguintes
 
@@ -71,18 +71,14 @@ bem como eventos e manipulação básica de DOM, fundamentos HTML e CSS.
 * Aprenda sobre objetos, estruturas, métodos e iteração (loops) em JavaScript
 * Implementar controle de versão com git (e a plataforma github)
 
-## 3. Considerações gerais
+## 3. Como usar
 
-* Resolvemos este projeto individualmente. Recomendamos uma duração de 1-3 sprints.
-* Concentre-se em aprender e não apenas "concluir" o projeto.
-* Sugerimos que você não tente saber tudo antes de começar a codificar.
-  Não se preocupe muito agora com o que você _ainda_ não entende.
-  Você vai aprender.
+Para usar o .STORE PASSWORDS SECURELY., basta selecionar um número de deslocamento, sendo permitido números positivos e negativos,  digitar sua senha no primeiro campo e clicar no botão "Criptografar" e você verá a mensagem criptografada no campo logo abaixo. 
+Para descriptografar basta informar o deslocamento (deve ser o mesmo utilizado na hora de Cifrar), colar a senha criptografada no primeiro campo e clicar no botão "Descriptografar" e o resultado será mostrado no campo abaixo.
 
-## 4. Marco: Critérios de Aceitação Mínimos do Projeto
+## 4. Protótipo do Projeto
 
-Esses são os requisitos que seu projeto deve atender para garantir que
-seu trabalho atenda aos objetivos principais.
+Esses são os requisitos atendidos pelo projeto.
 
 **1. Uma interface que deve permitir ao usuário:**
 
@@ -103,6 +99,9 @@ seu trabalho atenda aos objetivos principais.
     (inteiro positivo).
   - Veja o resultado da mensagem descriptografada.
 
+  Após pensar em um tema, foi realizado um protótipo no Excalidraw
+
+
 **2. Testes unitários dos métodos.**
 Os métodos `cipher` (`encode` e `decode`) devem ser cobertos por testes
 unitários.
@@ -111,7 +110,7 @@ unitários.
 O código final deve estar um repositório no GitHub. A interface, ou página da
 web, deve ser "implantada" usando o GitHub Pages.
 
-**4. Um README contendo uma definição de produto.**
+**4. Resultado**
 No README, conte-nos como você pensou sobre os usuários e qual foi o seu
 processo para definir o produto final em nível de experiência e interface.
 Estas perguntas servem de guia:
