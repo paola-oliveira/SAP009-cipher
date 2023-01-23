@@ -5,7 +5,7 @@ btCriptografar.addEventListener('click', function () {
   const mensagemOriginal = document.getElementById('original');
   const offSet = document.getElementById('offset');
   if (offSet.value !== '') {
-    const mensagemCriptografada = cipher.encode(offSet.value, mensagemOriginal.value);
+    const mensagemCriptografada = cipher.encode(parseInt(offSet.value), mensagemOriginal.value.toString());
     document.getElementById('cifrada').innerHTML = mensagemCriptografada;
   } else {
     alert("Por favor, insira um número de deslocamento");
@@ -17,7 +17,7 @@ btDescriptografar.addEventListener('click', function () {
   const mensagemOriginal = document.getElementById('original');
   const offSet = document.getElementById('offset');
   if (offSet.value !== '') {
-    const mensagemDescriptografada = cipher.decode(offSet.value, mensagemOriginal.value);
+    const mensagemDescriptografada = cipher.decode(parseInt(offSet.value), mensagemOriginal.value.toString());
     document.getElementById('cifrada').innerHTML = mensagemDescriptografada
   }else {
     alert("Por favor, insira um número de deslocamento");

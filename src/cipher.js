@@ -3,12 +3,12 @@ const alfabeto = 'abcdefghijklmnopqrstuvwxyz';
 
 
 function encode(offset, mensagem) {
+  if(typeof offset !== 'number' || typeof mensagem !== 'string'){
+    throw new TypeError('Por favor insira um número de deslocamento numérico e uma mensagem');
+  }
   let mensagemCriptografada = '';
   const offsetNumber = parseInt(offset);
   const alfabetoMaiusculo = alfabeto.toUpperCase();
-  if (typeof offset !== 'number' || typeof mensagem !== 'string') {
-    throw new TypeError();
-  }
   for (let i = 0; i < mensagem.length; i++) {
     const msg = mensagem[i];
     if(/[a-zA-Z]/.test(msg)){
@@ -23,12 +23,12 @@ function encode(offset, mensagem) {
 }
 
 function decode (offset,mensagem) {
+  if(typeof offset !== 'number' || typeof mensagem !== 'string'){
+    throw new TypeError('Por favor insira um número de deslocamento numérico e uma mensagem');
+  }
   let mensagemDescriptografada = '';
   const offsetNumber = parseInt(offset);
   const alfabetoMaiusculo = alfabeto.toUpperCase();
-  if (typeof offset !== 'number' || typeof mensagem !== 'string') {
-    throw new TypeError();
-  }
   for (let i = 0; i < mensagem.length; i++) {
     const msg = mensagem[i];
     if (/[a-zA-Z]/.test(msg)){
