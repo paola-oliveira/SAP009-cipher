@@ -86,7 +86,7 @@ unitários.
 
 Testes realizados com sucesso ✔️
 
-![testes.unitários](testes.jpg)
+![testes.unitários](testes.png)
 
 **3. Código do seu projeto enviado para seu repositório e interface "implantada".**
 O código final deve estar um repositório no GitHub. A interface, ou página da
