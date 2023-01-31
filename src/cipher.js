@@ -32,9 +32,9 @@ function decode (offset,mensagem) {
   for (let i = 0; i < mensagem.length; i++) {
     const msg = mensagem[i];
     if (/[a-zA-Z]/.test(msg)){
-      const decodificação = msg === msg.toUpperCase() ? alfabetoMaiusculo.indexOf(msg) : alfabeto.indexOf(msg);
-      const posiçãoOriginalLetra = (decodificação - (offsetNumber % alfabeto.length) + alfabeto.length) % alfabeto.length;
-      mensagemDescriptografada += msg === msg.toUpperCase() ? alfabetoMaiusculo[posiçãoOriginalLetra] : alfabeto[posiçãoOriginalLetra];
+      const numeroPosicaoOriginal = msg === msg.toUpperCase() ? alfabetoMaiusculo.indexOf(msg) : alfabeto.indexOf(msg);
+      const novaPosicaoLetra = (numeroPosicaoOriginal - (offsetNumber % alfabeto.length) + alfabeto.length) % alfabeto.length;
+      mensagemDescriptografada += msg === msg.toUpperCase() ? alfabetoMaiusculo[novaPosicaoLetra] : alfabeto[novaPosicaoLetra];
     }else{
       mensagemDescriptografada += msg;
     }
